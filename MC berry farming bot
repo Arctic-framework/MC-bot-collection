@@ -1,0 +1,21 @@
+## Created by Brytan Kelly 9/9/2022
+import time
+import pydirectinput as pd
+print("welcome")
+print(" how large is your farm horizontally")
+SIZE = input()
+time.sleep(2)
+cycles = 0
+while True:
+    for i in range(SIZE):
+        pd.rightClick()
+        pd.keyDown("d")
+        time.sleep(.17857142857 / 10)
+        pd.keyUp("d")
+    for i in range(SIZE):
+        pd.rightClick()
+        pd.keyDown("a")
+        time.sleep(.17857142857 / 10)
+        pd.keyUp("a")
+    cycles = cycles + 1
+    print(f'cycles complete: {cycles}')
